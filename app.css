@@ -1,0 +1,311 @@
+/* General Styles */
+html, body, * 
+{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container 
+{
+    width: 80%;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid cadetblue;
+    border-radius: 12px;
+}
+
+/* Content Section */
+section.content 
+{
+    display: flex;
+    margin: 20px;
+}
+
+/* Sidebar Styles */
+aside 
+{
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid slategray;
+    padding: 20px;
+    width: 15%;
+    border-radius: 12px;
+    margin-right: 20px;
+}
+
+aside h2 
+{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+aside ul, aside p 
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #333;
+}
+
+aside ul li 
+{
+    margin-bottom: 10px;
+}
+
+/* Main Content */
+main 
+{
+    flex-grow: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid slategray;
+}
+
+main section 
+{
+    margin-bottom: 20px;
+}
+
+main h2 
+{
+    font-size: 1.8em;
+    color: #2A9D8F;
+    border-bottom: 2px solid #2A9D8F;
+    padding-bottom: 10px;
+}
+
+main p, main ul 
+{
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Snake Game Section */
+.snake-container {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    border: 1px solid #333;
+    border-radius: 12px;
+}
+
+.snake {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.segment {
+    width: 30px;
+    height: 30px;
+    background-color: #33FF57;
+    border: 2px solid #000;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+/* Profile Section */
+.profile 
+{
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid slategray;
+    border-radius: 12px;
+    z-index: 2;
+}
+
+.profile-img 
+{
+    position: relative;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.name 
+{
+    font-size: 2em;
+    color: #333;
+}
+
+.info 
+{
+    color: #666;
+    font-size: 1.2em;
+}
+
+.description 
+{
+    margin-top: 20px;
+}
+
+.description h2 
+{
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.description p 
+{
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Responsive Media Queries */
+
+/* Laptop and desktops (1024px and above) */
+@media only screen and (min-width: 1024px) {
+    .container {
+        width: 75%;
+    }
+
+    main h2 {
+        font-size: 2em;
+    }
+
+    .snake-container {
+        height: 35vh;
+    }
+
+    .segment {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Tablets and small laptops (768px to 1024px) */
+@media only screen and (max-width: 1024px) {
+    /* Adjust container for tablets */
+    .container {
+        width: 85%;
+        padding: 15px;
+    }
+
+    section.content {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    main h2 {
+        font-size: 1.7em;
+    }
+
+    main p, main ul {
+        font-size: 1em;
+    }
+
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .snake-container {
+        height: 30vh;
+    }
+
+    .segment {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Mobile devices (480px to 768px) */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    section.content {
+        flex-direction: column;
+        margin: 10px;
+    }
+
+    aside {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    main h2 {
+        font-size: 1.5em;
+    }
+
+    main p, main ul {
+        font-size: 1em;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .name {
+        font-size: 1.8em;
+    }
+
+    .info {
+        font-size: 1.1em;
+    }
+
+    .snake-container {
+        height: 25vh;
+    }
+
+    .segment {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Small mobile devices (less than 480px) */
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .profile-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .name {
+        font-size: 1.6em;
+    }
+
+    .info {
+        font-size: 1em;
+    }
+
+    .description p {
+        font-size: 1em;
+    }
+
+    /* Further reduce snake segment size for small screens */
+    .segment {
+        width: 20px;
+        height: 20px;
+    }
+
+    .snake-container {
+        height: 20vh;
+    }
+}
